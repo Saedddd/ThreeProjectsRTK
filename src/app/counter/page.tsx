@@ -1,6 +1,10 @@
 
 
+
+
+
 const Counter = () => {
+
 
   return (
     <main className="w-full h-screen bg-black text-white">
@@ -16,6 +20,7 @@ const Counter = () => {
           Reset
         </button>
       </div>
+
     </main>
   );
 };

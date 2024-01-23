@@ -1,7 +1,7 @@
 "use client"
 
 
-import { increment } from "@/features/counterSlice/ui/counterSlice";
+import { increment, decrement } from "@/features/counterSlice/ui/counterSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 
@@ -17,7 +17,7 @@ const Counter = () => {
           Increment
         </button>
         <span>{counter}</span>
-        <button  className="btn btn-outline btn-primary">
+        <button onClick={()=> dispatch(decrement())}  className="btn btn-outline btn-primary">
           Decrement
         </button>
         <button  className="btn btn-outline btn-primary">

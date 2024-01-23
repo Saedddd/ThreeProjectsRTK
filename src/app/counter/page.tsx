@@ -1,9 +1,12 @@
+"use client"
 
 
+import { useSelector } from "react-redux";
 
 
 
 const Counter = () => {
+  const counter = useSelector((state : any) => state.counter.value)
 
 
   return (
@@ -12,7 +15,7 @@ const Counter = () => {
         <button  className="btn btn-outline btn-primary">
           Increment
         </button>
-        <span>0</span>
+        <span>{counter}</span>
         <button  className="btn btn-outline btn-primary">
           Decrement
         </button>

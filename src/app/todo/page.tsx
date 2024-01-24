@@ -1,4 +1,5 @@
-import TodoDetails from '@/widgets/TodoDetails/ui/TodoDetails'
+
+import TodoDetails from '@/widgets/TodoDetails'
 import React from 'react'
 
 const ToDoList = () => {

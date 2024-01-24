@@ -1,10 +1,17 @@
+import TodoDetails from '@/widgets/TodoDetails/ui/TodoDetails'
 import React from 'react'
 
 const ToDoList = () => {
   return (
-    <main className="w-full h-screen bg-black text-white">
-        <div className="text-center py-[10rem] flex items-center gap-8 justify-center">
-            <h1>Todo List</h1>
+    <main className="h-screen text-center flex justify-center  bg-black text-white">
+            
+        <div className="py-[10rem] items-center">
+            <h1 className='mb-12'>Todo List</h1>
+
+            <div className="">
+              <TodoDetails/>
+            </div>
+            
         </div>
     </main>
   )

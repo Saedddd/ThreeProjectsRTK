@@ -1,4 +1,5 @@
-import CounterDetails from "@/widgets/CounterDetails/ui/CounterDetails";
+import CounterDetails from "@/widgets/CounterDetails";
+
 
 
 const Counter = () => {

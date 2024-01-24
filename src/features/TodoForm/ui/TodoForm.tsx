@@ -1,3 +1,5 @@
+'use client'
+
 import Button from '@/shared/ui/Button'
 import React from 'react'
 
@@ -9,20 +11,24 @@ const TodoForm = () => {
 
   return (
     <>
-        <div className="flex justify-start items-center">
+        <div className="flex justify-between items-center m-auto w-[450px]">
 
-            
-            <label htmlFor="" className='w-[1090px]'>
-                <input className='w-full h-20 ml-10 border-none rounded-2xl px-5' placeholder='Write a comment...' />
-            </label>
+            <div className="">
 
-            <Button
-                type="submit"
-                onClick={handleSubmit}
-                className={'btn btn-primary'}
-            >
-                Add
-            </Button>
+                <label htmlFor="" className='w-[500px]'>
+                    <input className='w-full h-20 ml-10 border-none rounded-2xl px-5' placeholder='Write a to do...' />
+                </label>
+            </div>
+            <div className="">
+
+                <Button
+                    type="submit"
+                    onClick={handleSubmit}
+                    className={'btn btn-primary'}
+                >
+                    Add
+                </Button>
+            </div>
 
         </div>
     </>

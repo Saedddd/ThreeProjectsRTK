@@ -2,7 +2,9 @@ import TodoTask from '@/entities/TodoTask/ui/TodoTask'
 import TodoForm from '@/features/TodoForm'
 import React from 'react'
 
-const TodoDetails = () => {
+
+
+const TodoDetails= () => {
   return (
     <>
       
@@ -11,7 +13,7 @@ const TodoDetails = () => {
         </div>
 
         <div className="">
-            <TodoTask id={0} text={''}/>
+            <TodoTask id={''} text={''}/>
         </div>
     </>
   )

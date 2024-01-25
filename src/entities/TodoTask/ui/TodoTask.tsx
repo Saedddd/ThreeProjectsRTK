@@ -1,8 +1,10 @@
 import React from 'react'
 
-import { ITask } from '../types'
+import { ITodoList } from '../types'
 
-const TodoTask = ({id, text} : ITask) => {
+import DeleteEditTask from '@/features/DelleteEditTask'
+
+const TodoTask:React.FC<ITodoList> = ({task}) => {
   return (
     <>
     <div>
@@ -17,8 +19,13 @@ const TodoTask = ({id, text} : ITask) => {
                 </thead>
                 <tbody>
                 {/* row 1 */}
-                        <th>Tasks</th>
-                        <th>Actions</th>
+                    {task && task.map(task =>(
+                        <DeleteEditTask
+                            key={task.id}
+                            task={task}
+                        />
+                    ))
+                }
                 </tbody>
             </table>
         </div>

@@ -1,4 +1,8 @@
 export interface ITask {
-    id: number;
+    id: string;
     text: string;
+}
+
+export interface ITodoList{
+    task: ITask[]
 }

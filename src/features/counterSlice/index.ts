@@ -1,2 +1,2 @@
-import { counterSlice } from "./counterSlice/ui/counterSlice";
+import { counterSlice } from "./ui/counterSlice";
 export default counterSlice

@@ -24,8 +24,9 @@ const TodoTask:React.FC<ITodoList> = ({task}) => {
                             key={task.id}
                             task={task}
                         />
-                    ))
-                }
+                        ))
+                    }
+                    <DeleteEditTask task={''}/>
                 </tbody>
             </table>
         </div>

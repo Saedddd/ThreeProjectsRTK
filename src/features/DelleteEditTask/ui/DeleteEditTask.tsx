@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { FormEventHandler, useState } from 'react'
 
 import { FiTrash2 } from "react-icons/fi";
 import { FiEdit } from "react-icons/fi";
@@ -11,6 +11,13 @@ import Modal from '@/shared/ui/Modal';
 const DeleteEditTask:React.FC<TaskProps> = ({task}) => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const [todoValue, setTodoValue] = useState<string>(task.text)
+
+
+    const handleEditSubmit: FormEventHandler<HTMLFormElement> = (e) => {
+        e.preventDefault()
+
+        setIsOpen(false)
+    }
 
 
   return (
@@ -24,11 +31,24 @@ const DeleteEditTask:React.FC<TaskProps> = ({task}) => {
                     isOpen={isOpen}
                     onClose={() => setIsOpen(false)}
                 >
-                    <input 
-                        type="text" 
-                        
-                    
-                    />
+                <form onSubmit={handleEditSubmit}>
+                    <label>
+                        Edit task
+                            <div className="modal-action">
+
+                                <input 
+                                    type="text" 
+                                    value={todoValue}
+                                    onChange={(e)=>setTodoValue(e.target.value)}
+                                    className="input input-bordered input-primary w-full"
+                                />
+
+                                <button type='submit' className='btn'>Submit</button>
+
+                            </div>
+                    </label>
+                </form>
+
                 </Modal>
 
                 <FiEdit />

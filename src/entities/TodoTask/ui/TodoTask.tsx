@@ -26,7 +26,6 @@ const TodoTask:React.FC<ITodoList> = ({task}) => {
                         />
                         ))
                     }
-                    <DeleteEditTask task={''}/>
                 </tbody>
             </table>
         </div>

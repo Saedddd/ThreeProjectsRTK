@@ -1,14 +1,22 @@
 'use client'
 
+import { addTodo } from '@/features/TodoSlice/ui/TodoSlice'
 import Button from '@/shared/ui/Button'
 import React, { FormEventHandler, useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { v4 as uuidv4 } from 'uuid';
 
 const TodoForm = () => {
     const [newTaskValue, setNewTaskValue] = useState<string>('')
 
+    const dispatch = useDispatch()
+
     const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) =>{
         e.preventDefault()
-        console.log(newTaskValue)
+        dispatch(addTodo({
+            id: uuidv4(),
+            text: newTaskValue
+        }))
     }
 
   return (

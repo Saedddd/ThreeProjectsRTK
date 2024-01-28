@@ -3,11 +3,13 @@
 import { addTodo } from '@/features/TodoSlice/ui/TodoSlice'
 import Button from '@/shared/ui/Button'
 import React, { FormEventHandler, useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { v4 as uuidv4 } from 'uuid';
 
 const TodoForm = () => {
     const [newTaskValue, setNewTaskValue] = useState<string>('')
+
+    const todo = useSelector((state : any) => state.todo.todoList);
 
     const dispatch = useDispatch()
 

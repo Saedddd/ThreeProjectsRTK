@@ -1,9 +1,9 @@
 
 
 
-import TodoDetails from '@/widgets/TodoDetails'
+
 import React from 'react'
-import { useGetAllTasksQuery } from '@/shared/api/TasksApiSlice'
+
 
 const ToDoList = () => {
 
@@ -15,7 +15,7 @@ const ToDoList = () => {
             <h1 className='mb-12'>Todo List</h1>
 
             <div className="">
-              <TodoDetails/>
+        
 
             </div>
             

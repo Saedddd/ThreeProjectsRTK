@@ -6,8 +6,8 @@ import "./globals.css";
 
 import Header from "@/widgets/Header";
 import { RedaxProvider } from "@/shared/lib/redux/provider";
-import { ApiProvider } from "@reduxjs/toolkit/query/react";
-import { tasksApi } from "@/shared/api/TasksApiSlice";
+
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,10 +25,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <RedaxProvider>
-          <ApiProvider api={tasksApi}>
+
             <Header/>
             {children}
-          </ApiProvider>
+
         </RedaxProvider>
       </body>
     </html>

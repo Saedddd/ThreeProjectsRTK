@@ -1,8 +1,13 @@
 
 import TodoDetails from '@/widgets/TodoDetails'
 import React from 'react'
+import { useGetAllTasksQuery } from '@/shared/api/TasksApiSlice'
 
 const ToDoList = () => {
+  const {data} = useGetAllTasksQuery();
+
+  console.log(data)
+
   return (
     <main className="h-screen text-center flex justify-center  bg-black text-white">
             
@@ -11,6 +16,7 @@ const ToDoList = () => {
 
             <div className="">
               <TodoDetails/>
+
             </div>
             
         </div>

@@ -2,6 +2,7 @@
 
 
 
+import AddTodoForm from '@/features/AddTodoForm'
 import React from 'react'
 
 
@@ -15,7 +16,8 @@ const ToDoList = () => {
             <h1 className='mb-12'>Todo List</h1>
 
             <div className="">
-        
+                <AddTodoForm/>
+
 
             </div>
             

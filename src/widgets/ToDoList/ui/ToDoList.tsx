@@ -1,6 +1,7 @@
 import React from 'react'
 
 import TodoItem from '@/entities/TodoItem';
+import AddTodoForm from '@/features/AddTodoForm';
 
 
 const ToDoList = () => {
@@ -13,9 +14,13 @@ const ToDoList = () => {
 
 	return (
 		<ul className='list-group'>
+			
 			{todos.map((todo) => (
-				// eslint-disable-next-line react/jsx-key
-				<TodoItem id={todo.id} title={todo.title} completed={todo.completed} />
+				<TodoItem 
+					key={todo.id}
+					id={todo.id} 
+					title={todo.title} 
+					completed={todo.completed} />
 			))}
 		</ul>
 	);

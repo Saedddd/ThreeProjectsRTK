@@ -10,7 +10,7 @@ export type TTodoItem = {
 const TodoItem = ({ id, title, completed } : TTodoItem) => {
 	return (
 		<li className={`list-group-item ${completed && 'list-group-item-success'}`}>
-			<div className='d-flex justify-content-between' key={id}>
+			<div className='d-flex justify-content-between'>
 				<span className='d-flex align-items-center'>
 					<input type='checkbox' className='mr-3' checked={completed}></input>
 					{title}

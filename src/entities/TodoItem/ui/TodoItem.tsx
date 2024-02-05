@@ -1,8 +1,8 @@
 import React from 'react';
 
 export type TTodoItem = {
-    id: string,
-    title: string,
+    id: number,
+    title?: string,
     completed: boolean,
 }
 

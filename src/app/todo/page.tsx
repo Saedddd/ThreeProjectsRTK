@@ -3,10 +3,11 @@
 
 
 import AddTodoForm from '@/features/AddTodoForm'
+import ToDoList from '@/widgets/ToDoList'
 import React from 'react'
 
 
-const ToDoList = () => {
+const page = () => {
 
 
   return (
@@ -17,6 +18,13 @@ const ToDoList = () => {
 
             <div className="">
             <AddTodoForm/>
+            <ToDoList
+              todos={[
+                { id: 1, title: 'todo1', completed: false },
+		            { id: 2, title: 'todo2', completed: false },
+		            { id: 3, title: 'todo3', completed: true },
+              ]}
+            />
          
 
             </div>
@@ -26,4 +34,4 @@ const ToDoList = () => {
   )
 }
 
-export default ToDoList
+export default page

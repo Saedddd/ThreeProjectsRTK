@@ -2,6 +2,7 @@
 
 
 
+import TotalComletedItems from '@/entities/TotalComletedItems'
 import AddTodoForm from '@/features/AddTodoForm'
 import ToDoList from '@/widgets/ToDoList'
 import React from 'react'
@@ -25,6 +26,7 @@ const page = () => {
                 { id: 1, title: "Make a juice", completed: true},
               ]}
               />
+              <TotalComletedItems/>
 
 
             </div>

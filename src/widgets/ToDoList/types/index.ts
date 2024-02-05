@@ -1,6 +1,6 @@
 
-import { TTodoItem } from "@/entities/TodoItem/ui/TodoItem"
+import { TTodoItem } from "@/entities/TodoItem/types";
 
-export default interface ITodo{
-    todos: TTodoItem[]
+export type TTodoList = {
+    todos: TTodoItem[];
 }

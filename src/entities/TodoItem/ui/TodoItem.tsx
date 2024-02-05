@@ -1,21 +1,19 @@
 import React from 'react';
 
-export type TTodoItem = {
-    id: number,
-    title?: string,
-    completed: boolean,
-}
+import { TTodoItem } from '../types';
 
 
 const TodoItem = ({ id, title, completed } : TTodoItem) => {
 	return (
-		<li className={`list-group-item ${completed && 'list-group-item-success'}`}>
-			<div className='d-flex justify-content-between'>
-				<span className='d-flex align-items-center'>
-					<input type='checkbox' className='mr-3' checked={completed}></input>
+		<li className={`bg-primary shadow-md p-4 mb-4 rounded-md `}>
+			<div className='flex justify-between'>
+				<span className='flex items-center gap-3'>
+				<input type="checkbox" checked={completed} className={`checkbox checkbox-md`} />
 					{title}
 				</span>
-				<button className='btn btn-danger'>Delete</button>
+				<div className="">
+					<button className='btn btn-danger'>Delete</button>
+				</div>
 			</div>
 		</li>
 	);

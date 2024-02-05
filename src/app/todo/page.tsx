@@ -20,12 +20,12 @@ const page = () => {
             <AddTodoForm/>
             <ToDoList
               todos={[
-                { id: 1, title: 'todo1', completed: false },
-		            { id: 2, title: 'todo2', completed: false },
-		            { id: 3, title: 'todo3', completed: true },
+                { id: 1, title: "Make a coffee", completed: false},
+                { id: 1, title: "Make a tea", completed: true},
+                { id: 1, title: "Make a juice", completed: true},
               ]}
-            />
-         
+              />
+
 
             </div>
             

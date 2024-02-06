@@ -26,7 +26,7 @@ const page = () => {
                 { id: 1, title: "Make a juice", completed: true},
               ]}
               />
-              <TotalComletedItems/>
+            <TotalComletedItems/>
 
 
             </div>

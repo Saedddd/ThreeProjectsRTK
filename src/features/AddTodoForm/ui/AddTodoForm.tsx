@@ -1,13 +1,24 @@
 'use client'
 
+import { addTodo } from '@/features/TodoSlice/ui/TodoSlice';
+import { match } from 'assert';
 import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 const AddTodoForm = () => {
 	const [value, setValue] = useState('');
 
+	const dispatch = useDispatch();
+
+
 	const onSubmit = (event : any) => {
 		event.preventDefault();
-		console.log('user entered: ' + value);
+		dispatch(addTodo({
+				id: 1,
+				title: value,
+				completed: true,
+			})
+		);
 	};
 
 	return (

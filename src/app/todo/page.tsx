@@ -10,7 +10,7 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 
 
-const page = () => {
+const Todo = () => {
 
   const state = useSelector((state: RootState) => state);
 
@@ -23,9 +23,9 @@ const page = () => {
             <div className="">
             <AddTodoForm/>
             <ToDoList
-              todos={[
+              todos={
                 state.todos
-              ]}
+              }
               />
             <TotalComletedItems/>
 
@@ -37,4 +37,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Todo

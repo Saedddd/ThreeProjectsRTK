@@ -1,15 +1,18 @@
-
+'use client'
 
 
 
 import TotalComletedItems from '@/entities/TotalComletedItems'
 import AddTodoForm from '@/features/AddTodoForm'
 import ToDoList from '@/widgets/ToDoList'
+import { RootState } from '@reduxjs/toolkit/query'
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 
 
 const page = () => {
 
+  const state = useSelector((state: RootState) => state);
 
   return (
     <main className="h-screen text-center flex justify-center  bg-black text-white">
@@ -21,9 +24,7 @@ const page = () => {
             <AddTodoForm/>
             <ToDoList
               todos={[
-                { id: 1, title: "Make a coffee", completed: false},
-                { id: 1, title: "Make a tea", completed: true},
-                { id: 1, title: "Make a juice", completed: true},
+                state.todos
               ]}
               />
             <TotalComletedItems/>

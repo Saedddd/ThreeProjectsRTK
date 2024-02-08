@@ -1,6 +1,7 @@
 'use client'
 
 import { addTodo } from '@/features/TodoSlice/ui/TodoSlice';
+import { RootState } from '@reduxjs/toolkit/query';
 import { match } from 'assert';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -10,10 +11,13 @@ const AddTodoForm = () => {
 
 	const dispatch = useDispatch();
 
+	// const count = useSelector((state: RootState) => state);
+	// console.log(count);
+
 
 	const onSubmit = (event : any) => {
 		event.preventDefault();
-		dispatch(addTodo({
+				dispatch(addTodo({
 				id: 1,
 				title: value,
 				completed: true,

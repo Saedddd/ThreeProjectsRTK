@@ -7,7 +7,7 @@ import { TTodoList } from '../types';
 const ToDoList = ({todos} : TTodoList) => {
 	return (
 		<ul className='list-group'>
-			{todos.map((data) => (
+			{todos[0].map((data) => (
 				<TodoItem
 					key={data.id}
 					id={data.id}

@@ -4,10 +4,14 @@ import TodoItem from "@/entities/TodoItem";
 
 import { TTodoList } from "../types";
 
-const ToDoList = ({ todo }: TTodoList) => {
+const ToDoList = ({ todos }: TTodoList) => {
+  if (!Array.isArray(todos)) {
+    return <div>Todo List is empty</div>;
+  }
+
   return (
     <ul className="list-group">
-      {todo?.map((data) => (
+      {todos?.map((data) => (
         <TodoItem
           key={data.id}
           id={data.id}

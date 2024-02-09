@@ -1,6 +1,5 @@
-import { TTodoItem } from "@/entities/TodoItem/types"
+import { TTodoItem } from "@/entities/TodoItem/types";
 
 export interface TodoState {
-    todoList: TTodoItem[]
+  todos: TTodoItem[];
 }
-  

@@ -4,7 +4,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 import { TodoState } from "../types";
 
-const initialState = {
+const initialState: TodoState = {
   todos: [],
 };
 

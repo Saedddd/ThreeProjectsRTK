@@ -5,10 +5,9 @@ import TodoItem from "@/entities/TodoItem";
 import { TTodoList } from "../types";
 
 const ToDoList = ({ todo }: TTodoList) => {
-  console.log(todo);
   return (
     <ul className="list-group">
-      {todo.map((data) => (
+      {todo?.map((data) => (
         <TodoItem
           key={data.id}
           id={data.id}

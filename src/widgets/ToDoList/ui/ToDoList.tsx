@@ -1,24 +1,23 @@
-import React from 'react'
+import React from "react";
 
-import TodoItem from '@/entities/TodoItem';
+import TodoItem from "@/entities/TodoItem";
 
-import { TTodoList } from '../types';
+import { TTodoList } from "../types";
 
-const ToDoList = ({todos} : TTodoList) => {
-	console.log(todos)
-	return (
-		<ul className='list-group'>
-			{todos.map((data) => (
-				<TodoItem
-					key={data.id}
-					id={data.id}
-					title={data.title}
-					completed={data.completed}
-				/>
-			))}
+const ToDoList = ({ todo }: TTodoList) => {
+  console.log(todo);
+  return (
+    <ul className="list-group">
+      {todo.map((data) => (
+        <TodoItem
+          key={data.id}
+          id={data.id}
+          title={data.title}
+          completed={data.completed}
+        />
+      ))}
+    </ul>
+  );
+};
 
-		</ul>
-	);
-}
-
-export default ToDoList
+export default ToDoList;

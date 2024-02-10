@@ -3,10 +3,18 @@ import { v4 as uuidv4 } from "uuid";
 
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-import { TodoState } from "../types";
+type Todo = {
+  id: string;
+  title: string;
+  completed: boolean;
+};
+
+type TodoState = {
+  list: Todo[];
+};
 
 const initialState: TodoState = {
-  todos: [],
+  list: [],
 };
 
 export const TodoSlice = createSlice({
@@ -14,8 +22,8 @@ export const TodoSlice = createSlice({
   initialState,
   reducers: {
     addTodo: (state, action: PayloadAction<string>) => {
-      state.todos.push({
-        id: 1,
+      state.list.push({
+        id: uuidv4(),
         title: action.payload,
         completed: false,
       });

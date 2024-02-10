@@ -6,7 +6,7 @@ import { useAppDispatch } from "@/shared/hook/hook";
 
 import { toggleComplete, removeTodo } from "@/features/TodoSlice/ui/TodoSlice";
 
-const TodoItem = ({ id, title, completed }: TTodoItem) => {
+const TodoItem: React.FC<TTodoItem> = ({ id, title, completed }) => {
   const dispatch = useAppDispatch();
 
   return (

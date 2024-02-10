@@ -3,22 +3,15 @@ import React from "react";
 import TodoItem from "@/entities/TodoItem";
 
 import { TTodoList } from "../types";
-import { useSelector } from "react-redux";
+import { useAppSelector } from "@/shared/hook/hook";
 
-const ToDoList = ({ todos }: TTodoList) => {
-  if (!Array.isArray(todos)) {
-    return <div>Todo List is empty</div>;
-  }
+const ToDoList = () => {
+  const todos = useAppSelector((state) => state.todos.list);
 
   return (
     <ul className="list-group">
-      {todos.map((data) => (
-        <TodoItem
-          key={data.id}
-          id={data.id}
-          title={data.title}
-          completed={data.completed}
-        />
+      {todos?.map((data) => (
+        <TodoItem key={data.id} {...data} />
       ))}
     </ul>
   );

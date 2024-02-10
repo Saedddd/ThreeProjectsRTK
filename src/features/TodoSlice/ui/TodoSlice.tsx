@@ -29,8 +29,15 @@ export const TodoSlice = createSlice({
       });
     },
 
-    toggleComplete: (state, action: PayloadAction<string>) => {},
-    removeTodo: (state, action: PayloadAction<string>) => {},
+    toggleComplete(state, action: PayloadAction<string>) {
+      const toggledTodo = state.list.find((todo) => todo.id === action.payload);
+      if (toggledTodo) {
+        toggledTodo.completed = !toggledTodo.completed;
+      }
+    },
+    removeTodo(state, action: PayloadAction<string>) {
+      state.list = state.list.filter((todo) => todo.id !== action.payload);
+    },
   },
 });
 

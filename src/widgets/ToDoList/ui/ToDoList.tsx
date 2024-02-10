@@ -5,7 +5,7 @@ import TodoItem from "@/entities/TodoItem";
 import { TTodoList } from "../types";
 import { useAppSelector } from "@/shared/hook/hook";
 
-const ToDoList = () => {
+const ToDoList: React.FC = () => {
   const todos = useAppSelector((state) => state.todos.list);
 
   return (

@@ -2,28 +2,21 @@
 
 import { addTodo } from "@/features/TodoSlice/ui/TodoSlice";
 import { RootState } from "@reduxjs/toolkit/query";
-import { match } from "assert";
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useAppDispatch } from "@/shared/hook/hook";
 import { v4 as uuidv4 } from "uuid";
 
 const AddTodoForm = () => {
   const [value, setValue] = useState("");
 
-  const dispatch = useDispatch();
-
-  // const count = useSelector((state: RootState) => state);
-  // console.log(count);
+  const dispatch = useAppDispatch();
 
   const onSubmit = (event: any) => {
     event.preventDefault();
-    const todo = {
-      id: uuidv4(),
-      title: value,
-      completed: true,
-    };
-    dispatch(addTodo(todo));
-    setValue("");
+    if (value.trim().length) {
+      dispatch(addTodo(value));
+      setValue("");
+    }
   };
 
   return (

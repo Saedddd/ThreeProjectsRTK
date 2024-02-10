@@ -1,4 +1,5 @@
 import React from "react";
+import { v4 as uuidv4 } from "uuid";
 
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
@@ -12,7 +13,13 @@ export const TodoSlice = createSlice({
   name: "todos",
   initialState,
   reducers: {
-    addTodo: (state, action) => {},
+    addTodo: (state, action: PayloadAction<string>) => {
+      state.todos.push({
+        id: 1,
+        title: action.payload,
+        completed: false,
+      });
+    },
   },
 });
 

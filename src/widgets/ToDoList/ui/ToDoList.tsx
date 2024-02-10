@@ -3,6 +3,7 @@ import React from "react";
 import TodoItem from "@/entities/TodoItem";
 
 import { TTodoList } from "../types";
+import { useSelector } from "react-redux";
 
 const ToDoList = ({ todos }: TTodoList) => {
   if (!Array.isArray(todos)) {
@@ -11,7 +12,7 @@ const ToDoList = ({ todos }: TTodoList) => {
 
   return (
     <ul className="list-group">
-      {todos?.map((data) => (
+      {todos.map((data) => (
         <TodoItem
           key={data.id}
           id={data.id}

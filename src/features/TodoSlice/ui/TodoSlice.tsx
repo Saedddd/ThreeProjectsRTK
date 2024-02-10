@@ -28,9 +28,12 @@ export const TodoSlice = createSlice({
         completed: false,
       });
     },
+
+    toggleComplete: (state, action: PayloadAction<string>) => {},
+    removeTodo: (state, action: PayloadAction<string>) => {},
   },
 });
 
-export const { addTodo } = TodoSlice.actions;
+export const { addTodo, toggleComplete, removeTodo } = TodoSlice.actions;
 
 export const TodoReducer = TodoSlice.reducer;

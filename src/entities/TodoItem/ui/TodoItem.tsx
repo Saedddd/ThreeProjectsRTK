@@ -16,7 +16,7 @@ const TodoItem: React.FC<TTodoItem> = ({ id, title, completed }) => {
           <input
             type="checkbox"
             checked={completed}
-            className={`checkbox checkbox-md`}
+            className={`checkbox bg-black`}
             onChange={() => dispatch(toggleComplete(id))}
           />
           {title}

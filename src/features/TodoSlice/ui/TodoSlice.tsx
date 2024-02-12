@@ -3,15 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-type Todo = {
-  id: string;
-  title: string;
-  completed: boolean;
-};
-
-type TodoState = {
-  list: Todo[];
-};
+import TodoState from "../types";
 
 const initialState: TodoState = {
   list: [],

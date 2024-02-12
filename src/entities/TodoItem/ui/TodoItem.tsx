@@ -1,12 +1,12 @@
 import React from "react";
 
-import { TTodoItem } from "../types";
+import ITodoItem from "../types";
 
 import { useAppDispatch } from "@/shared/hook/hook";
 
 import { toggleComplete, removeTodo } from "@/features/TodoSlice/ui/TodoSlice";
 
-const TodoItem: React.FC<TTodoItem> = ({ id, title, completed }) => {
+const TodoItem: React.FC<ITodoItem> = ({ id, title, completed }) => {
   const dispatch = useAppDispatch();
 
   return (

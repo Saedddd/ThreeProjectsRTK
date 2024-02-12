@@ -1,17 +1,9 @@
-"use client";
-
 import TotalComletedItems from "@/entities/TotalComletedItems";
 import AddTodoForm from "@/features/AddTodoForm";
 import ToDoList from "@/widgets/ToDoList";
-import { RootState } from "@reduxjs/toolkit/query";
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
 
-import { TTodoList } from "@/widgets/ToDoList/types";
-
-const Todo = () => {
-  const state = useSelector((state: TTodoList) => state);
-
+const page = () => {
   return (
     <main className="h-screen text-center flex justify-center  bg-black text-white">
       <div className="py-[10rem] items-center">
@@ -19,7 +11,7 @@ const Todo = () => {
 
         <div className="">
           <AddTodoForm />
-          <ToDoList todos={state.todos} />
+          <ToDoList />
           <TotalComletedItems />
         </div>
       </div>
@@ -27,4 +19,4 @@ const Todo = () => {
   );
 };
 
-export default Todo;
+export default page;

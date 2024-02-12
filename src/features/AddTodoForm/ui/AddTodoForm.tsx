@@ -1,10 +1,8 @@
 "use client";
 
 import { addTodo } from "@/features/TodoSlice/ui/TodoSlice";
-import { RootState } from "@reduxjs/toolkit/query";
 import React, { useState } from "react";
 import { useAppDispatch } from "@/shared/hook/hook";
-import { v4 as uuidv4 } from "uuid";
 
 const AddTodoForm = () => {
   const [value, setValue] = useState("");

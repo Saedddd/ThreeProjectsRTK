@@ -1,8 +1,9 @@
+"use client";
+
 import React from "react";
 
 import TodoItem from "@/entities/TodoItem";
 
-import { TTodoList } from "../types";
 import { useAppSelector } from "@/shared/hook/hook";
 
 const ToDoList: React.FC = () => {

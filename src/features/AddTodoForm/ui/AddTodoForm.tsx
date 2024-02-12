@@ -9,7 +9,13 @@ const AddTodoForm = () => {
 
   const dispatch = useAppDispatch();
 
-  const onSubmit = (event: any) => {
+  const handleKeyDown: React.KeyboardEventHandler<HTMLInputElement> = (e) => {
+    if (e.key === "Enter") {
+      onSubmit();
+    }
+  };
+
+  const onSubmit: React.FormEventHandler<HTMLFormElement> = (event) => {
     event.preventDefault();
     if (value.trim().length) {
       dispatch(addTodo(value));
@@ -30,6 +36,7 @@ const AddTodoForm = () => {
           placeholder="Add todo..."
           value={value}
           onChange={(event) => setValue(event.target.value)}
+          onKeyDown={handleKeyDown}
         ></input>
       </div>
       <div className="">

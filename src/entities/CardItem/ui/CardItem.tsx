@@ -4,17 +4,19 @@ import ICardItem from "../types";
 
 import Image from "next/image";
 
-const CardItem = ({ id, title, img, desc }: ICardItem) => {
+const CardItem = ({ id, title, img, desc, price }: ICardItem) => {
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
       <figure>
-        <Image src={img} alt="Shoes" />
+        <Image src={img} width={25} height={25} alt="Shoes" />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
         <p>{desc}</p>
-        <div className="card-actions justify-end">
-          <button className="btn btn-primary">Buy Now</button>
+        <p>{price}</p>
+        <div className="flex card-actions justify-end">
+          <button className="btn btn-primary">Add to cart</button>
+          <button className="btn btn-primary">Favorite</button>
         </div>
       </div>
     </div>

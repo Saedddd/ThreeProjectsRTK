@@ -8,12 +8,12 @@ const CardItem = ({ id, title, img, desc, price }: ICardItem) => {
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
       <figure>
-        <Image src={img} width={25} height={25} alt="Shoes" />
+        <Image src={img} width={200} alt="Shoes" />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
         <p>{desc}</p>
-        <p>{price}</p>
+        <p>{price}$</p>
         <div className="flex card-actions justify-end">
           <button className="btn btn-primary">Add to cart</button>
           <button className="btn btn-primary">Favorite</button>

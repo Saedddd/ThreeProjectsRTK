@@ -1,14 +1,25 @@
 {
-    "tasks": [
-        {
-            "id": "1",
-            "text": "Learn english language"
-
-        },
-        {
-            "id": "2",
-            "text": "Learn kazakh language"
-
-        }
-    ]
+  "products": [
+    {
+      "id": "1",
+      "title": "Samsung Galaxy A51",
+      "price": 350,
+      "img": "image",
+      "desc": "lorem ipsum dolor sit amet, consectetur"
+    },
+    {
+      "id": "2",
+      "title": "Samsung Galaxy A12",
+      "price": 150,
+      "img": "image",
+      "desc": "lorem ipsum dolor sit amet, consectetur"
+    },
+    {
+      "id": "3",
+      "title": "Samsung Galaxy S21",
+      "price": 450,
+      "img": "image",
+      "desc": "lorem ipsum dolor sit amet, consectetur"
+    }
+  ]
 }

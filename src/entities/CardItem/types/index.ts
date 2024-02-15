@@ -1,6 +1,8 @@
+import { StaticImageData } from "next/image";
+
 export default interface ICardItem {
   id: string;
-  img: any;
+  img: string | StaticImageData;
   title: string;
   price: number;
   desc: string;

@@ -8,7 +8,6 @@ const Shopping = () => {
       <div className="text-center py-[5rem] flex items-center gap-8 justify-center">
         Shop
       </div>
-      <div className="py-[5rem]"></div>
       <div className="">
         <CatalogShop />
       </div>

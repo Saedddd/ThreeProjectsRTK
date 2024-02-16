@@ -6,7 +6,7 @@ export const productsApi = createApi({
   reducerPath: "products",
   baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3001/" }),
   endpoints: (builder) => ({
-    getAllProducts: builder.query<ICardSlice["products"], undefined>({
+    getAllProducts: builder.query<ICardSlice["products"], undefined | void>({
       query: () => "products",
     }),
   }),

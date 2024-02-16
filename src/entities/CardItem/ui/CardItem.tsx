@@ -8,7 +8,7 @@ const CardItem = ({ id, title, img, desc, price }: ICardItem) => {
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
       <figure>
-        <Image src={img} width={200} alt="Shoes" />
+        {/* <Image src={img} width={200} height={12} alt="Shoes" /> */}
       </figure>
       <div className="card-body">
         <h2 className="card-title">{title}</h2>

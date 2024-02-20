@@ -4,8 +4,6 @@ import CardItem from "@/entities/CardItem";
 
 import React from "react";
 
-import image from "@/shared/assets/12.jpg";
-
 import { useGetAllProductsQuery } from "@/shared/api/apiCardSlice";
 
 const CatalogShop = () => {

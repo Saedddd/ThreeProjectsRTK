@@ -28,14 +28,24 @@ const Header = () => {
           Cart
         </Button>
         <Modal isOpen={isOpenCart} onClose={() => setIsOpenCart(false)}>
-          <div className="modal-actions">fsdfdsf</div>
+          <div className="modal-actions">
+            <div className="">
+              <h1>Cart</h1>
+              <div className="flex flex-col"></div>
+            </div>
+          </div>
         </Modal>
 
         <Button onClick={() => setIsOpenFav(true)} type="button">
-          Likes
+          Fav
         </Button>
         <Modal isOpen={isOpenFav} onClose={() => setIsOpenFav(false)}>
-          <div className="modal-actions">fsdfdsf</div>
+          <div className="modal-actions">
+            <div className="">
+              <h1>Favorite</h1>
+              <div className="flex flex-col"></div>
+            </div>
+          </div>
         </Modal>
       </ul>
     </div>

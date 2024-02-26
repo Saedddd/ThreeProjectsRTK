@@ -1,10 +1,19 @@
 import React from "react";
 
 import ICardItem from "../types";
+import { addToCart } from "@/features/AddToCart/ui/AddToCart";
+import ICart from "@/features/AddToCart/types";
 
 import Image from "next/image";
+import { useDispatch } from "react-redux";
 
 const CardItem = ({ id, title, img, desc, price }: ICardItem) => {
+  const dispatch = useDispatch();
+
+  const handleAddToCart = (product: ICart) => {
+    dispatch(addToCart(product));
+  };
+
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
       <figure>
@@ -15,7 +24,9 @@ const CardItem = ({ id, title, img, desc, price }: ICardItem) => {
         <p>{desc}</p>
         <p>{price}$</p>
         <div className="flex card-actions justify-end">
-          <button className="btn btn-primary">Add to cart</button>
+          <button onClick={handleAddToCart} className="btn btn-primary">
+            Add to cart
+          </button>
           <button className="btn btn-primary">Favorite</button>
         </div>
       </div>

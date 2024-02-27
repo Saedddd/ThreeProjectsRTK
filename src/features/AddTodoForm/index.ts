@@ -1,2 +1,2 @@
-import AddTodoForm from "./ui/AddTodoForm";
-export default AddTodoForm
+import AddTodoForm from "./slice/AddTodoForm";
+export default AddTodoForm;

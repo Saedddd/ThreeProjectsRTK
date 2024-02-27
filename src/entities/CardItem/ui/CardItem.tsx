@@ -1,7 +1,7 @@
 import React from "react";
 
 import ICardItem from "../types";
-import { addToCart } from "@/features/AddToCart/ui/AddToCart";
+import { addToCart } from "@/features/AddToCart/slice/AddToCart";
 import ICart from "@/features/AddToCart/types";
 
 import Image from "next/image";

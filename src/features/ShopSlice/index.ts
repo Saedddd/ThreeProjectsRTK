@@ -1,2 +1,2 @@
-import ShopSlice from "./ui/ShopSlice.";
+import ShopSlice from "./slice/ShopSlice.";
 export default ShopSlice;

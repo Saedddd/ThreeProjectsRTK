@@ -1,2 +1,2 @@
-import {TodoSlice} from "./ui/TodoSlice";
+import { TodoSlice } from "./slice/TodoSlice";
 export default TodoSlice;

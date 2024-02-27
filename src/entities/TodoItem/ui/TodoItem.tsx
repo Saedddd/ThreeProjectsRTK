@@ -4,7 +4,10 @@ import ITodoItem from "../types";
 
 import { useAppDispatch } from "@/shared/hook/hook";
 
-import { toggleComplete, removeTodo } from "@/features/TodoSlice/ui/TodoSlice";
+import {
+  toggleComplete,
+  removeTodo,
+} from "@/features/TodoSlice/slice/TodoSlice";
 
 const TodoItem: React.FC<ITodoItem> = ({ id, title, completed }) => {
   const dispatch = useAppDispatch();

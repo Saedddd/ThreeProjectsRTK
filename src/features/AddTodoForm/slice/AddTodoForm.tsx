@@ -1,6 +1,6 @@
 "use client";
 
-import { addTodo } from "@/features/TodoSlice/ui/TodoSlice";
+import { addTodo } from "@/features/TodoSlice/slice/TodoSlice";
 import React, { useState } from "react";
 import { useAppDispatch } from "@/shared/hook/hook";
 

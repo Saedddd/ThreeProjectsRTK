@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { CounterReducer } from "@/features/counterSlice/ui/counterSlice";
-import { TodoReducer } from "@/features/TodoSlice/ui/TodoSlice";
+import { CounterReducer } from "@/features/counterSlice/slice/counterSlice";
+import { TodoReducer } from "@/features/TodoSlice/slice/TodoSlice";
 import { productsApi } from "@/shared/api/apiCardSlice";
-import { CartReducer } from "@/features/AddToCart/ui/AddToCart";
+import { CartReducer } from "@/features/AddToCart/slice/AddToCart";
 
 export const store = configureStore({
   reducer: {

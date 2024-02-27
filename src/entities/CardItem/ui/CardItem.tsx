@@ -10,8 +10,16 @@ import { useDispatch } from "react-redux";
 const CardItem = ({ id, title, img, desc, price }: ICardItem) => {
   const dispatch = useDispatch();
 
-  const handleAddToCart = (product: ICart) => {
-    dispatch(addToCart(product));
+  const handleAddToCart = () => {
+    dispatch(
+      addToCart({
+        id,
+        title,
+        img,
+        desc,
+        price,
+      })
+    );
   };
 
   return (

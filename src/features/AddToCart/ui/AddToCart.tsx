@@ -12,7 +12,7 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action: PayloadAction<ICardItem>) => {
-      state.card.findIndex((item) => item.id === action.payload.id);
+      state.card.push(action.payload);
     },
   },
 });

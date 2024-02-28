@@ -17,9 +17,9 @@ const cartSlice = createSlice({
       );
       if (index >= 0) {
         state.card[index].cardQuantity =
-          (state.card[index].cardQuantity = 1) + 1;
+          (state.card[index].cardQuantity || 0) + 1;
       } else {
-        const tempProduct = { ...action.payload, cartQuantity: 1 };
+        const tempProduct = { ...action.payload, cardQuantity: 1 };
         state.card.push(tempProduct);
       }
     },

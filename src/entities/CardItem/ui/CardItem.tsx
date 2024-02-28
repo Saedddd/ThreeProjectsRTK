@@ -6,7 +6,7 @@ import { addToCart } from "@/features/AddToCart/slice/AddToCart";
 import Image from "next/image";
 import { useDispatch } from "react-redux";
 
-const CardItem = ({ id, title, img, desc, price, quantity }: ICardItem) => {
+const CardItem = ({ id, title, img, desc, price, cardQuantity }: ICardItem) => {
   const dispatch = useDispatch();
 
   const handleAddToCart = () => {
@@ -17,7 +17,7 @@ const CardItem = ({ id, title, img, desc, price, quantity }: ICardItem) => {
         img,
         desc,
         price,
-        quantity,
+        cardQuantity,
       })
     );
   };

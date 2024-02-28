@@ -6,4 +6,5 @@ export default interface ICardItem {
   title: string;
   price: number;
   desc: string;
+  quantity: number;
 }

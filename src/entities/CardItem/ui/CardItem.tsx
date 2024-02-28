@@ -2,12 +2,11 @@ import React from "react";
 
 import ICardItem from "../types";
 import { addToCart } from "@/features/AddToCart/slice/AddToCart";
-import ICart from "@/features/AddToCart/types";
 
 import Image from "next/image";
 import { useDispatch } from "react-redux";
 
-const CardItem = ({ id, title, img, desc, price }: ICardItem) => {
+const CardItem = ({ id, title, img, desc, price, quantity }: ICardItem) => {
   const dispatch = useDispatch();
 
   const handleAddToCart = () => {
@@ -18,6 +17,7 @@ const CardItem = ({ id, title, img, desc, price }: ICardItem) => {
         img,
         desc,
         price,
+        quantity,
       })
     );
   };

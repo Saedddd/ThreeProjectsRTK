@@ -24,7 +24,16 @@ const cartSlice = createSlice({
     },
     removeFromCart: (state, action: PayloadAction<string>) => {
       const cardId = action.payload;
-      state.card = state.card.filter((item) => item.id !== cardId);
+      const cardIndex = state.card.findIndex((item) => item.id === cardId);
+      const cards = state.card[cardIndex].cardQuantity;
+      if (cards > 1) {
+        state.card[cardIndex].cardQuantity =
+          state.card[cardIndex].cardQuantity - 1;
+      } else if (cards == 1) {
+        state.card.splice(cardIndex, 1);
+      }
+
+      // state.card = state.card.filter((item) => item.id !== cardId);
     },
   },
 });

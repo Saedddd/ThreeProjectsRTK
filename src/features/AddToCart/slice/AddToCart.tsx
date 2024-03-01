@@ -30,10 +30,8 @@ const cartSlice = createSlice({
         state.card[cardIndex].cardQuantity =
           state.card[cardIndex].cardQuantity - 1;
       } else if (cards == 1) {
-        state.card.splice(cardIndex, 1);
+        state.card = state.card.filter((item) => item.id !== cardId);
       }
-
-      // state.card = state.card.filter((item) => item.id !== cardId);
     },
   },
 });

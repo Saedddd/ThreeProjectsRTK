@@ -23,13 +23,15 @@ const cartSlice = createSlice({
       }
     },
     removeFromCart: (state, action: PayloadAction<string>) => {
-      const cardId = action.payload;
-      const cardIndex = state.card.findIndex((item) => item.id === cardId);
-      const cards = state.card[cardIndex].cardQuantity;
+      const cardId = action.payload; // для понимания какая именно карточка выбрана
+      const cardIndex = state.card.findIndex((item) => item.id === cardId); // пробегание по массиву карточек и возвращение их айди
+      const cards = state.card[cardIndex].cardQuantity; // записано в константу значение cardQuantity
       if (cards > 1) {
+        // условие, которое уменьшает cardQuantity до значение 1
         state.card[cardIndex].cardQuantity =
           state.card[cardIndex].cardQuantity - 1;
       } else if (cards == 1) {
+        // если cardQuantity равен одному то с помощью метода filter удаляется карточка
         state.card = state.card.filter((item) => item.id !== cardId);
       }
     },

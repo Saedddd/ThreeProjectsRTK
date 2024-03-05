@@ -2,6 +2,7 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 import ICart from "../types";
 import ICardItem from "@/entities/CardItem/types";
+import { act } from "react-dom/test-utils";
 
 const initialState: ICart = {
   card: [],
@@ -35,9 +36,10 @@ const cartSlice = createSlice({
         state.card = state.card.filter((item) => item.id !== cardId);
       }
     },
+    clearFromCart: (state, action: PayloadAction<ICardItem>) => {},
   },
 });
 
-export const { addToCart, removeFromCart } = cartSlice.actions;
+export const { addToCart, removeFromCart, clearFromCart } = cartSlice.actions;
 
 export const CartReducer = cartSlice.reducer;

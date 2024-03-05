@@ -25,7 +25,6 @@ const ItemCart = ({ img, title, id, desc, price, cardQuantity }: ICardItem) => {
           <button onClick={handlerRemoveCard} className="btn btn-primary">
             Delete
           </button>
-          <button className="btn btn-primary">Сlear</button>
         </div>
       </div>
     </div>

@@ -47,6 +47,7 @@ const Header = () => {
                     cardQuantity={item.cardQuantity}
                   />
                 ))}
+                <button className="btn btn-primary">Сlear</button>
               </div>
             </div>
           </div>

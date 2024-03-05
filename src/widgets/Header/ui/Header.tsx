@@ -1,15 +1,19 @@
 "use client";
 
 import ItemCart from "@/entities/ItemCart";
+import { clearFromCart } from "@/features/AddToCart/slice/AddToCart";
 import { useAppSelector } from "@/shared/hook/hook";
 import Button from "@/shared/ui/Button";
 import Modal from "@/shared/ui/Modal";
 import Link from "next/link";
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 
 const Header = () => {
   const [isOpenCart, setIsOpenCart] = useState<boolean>(false);
   const [isOpenFav, setIsOpenFav] = useState<boolean>(false);
+
+  const dispatch = useDispatch();
 
   const cards = useAppSelector((state) => state.cart.card);
 
@@ -47,7 +51,12 @@ const Header = () => {
                     cardQuantity={item.cardQuantity}
                   />
                 ))}
-                <button className="btn btn-primary">Сlear</button>
+                <button
+                  className="btn btn-primary"
+                  onClick={() => dispatch(clearFromCart())}
+                >
+                  Сlear
+                </button>
               </div>
             </div>
           </div>

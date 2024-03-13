@@ -20,6 +20,20 @@
       "price": 450,
       "img": "image",
       "desc": "lorem ipsum dolor sit amet, consectetur"
+    },
+    {
+      "id": "3",
+      "title": "Samsung Galaxy S21",
+      "price": 450,
+      "img": "image",
+      "desc": "lorem ipsum dolor sit amet, consectetur"
+    },
+    {
+      "id": "3",
+      "title": "Samsung Galaxy S21",
+      "price": 450,
+      "img": "image",
+      "desc": "lorem ipsum dolor sit amet, consectetur"
     }
   ]
 }

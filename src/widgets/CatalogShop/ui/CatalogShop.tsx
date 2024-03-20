@@ -24,6 +24,7 @@ const CatalogShop = () => {
             price={item.price}
             desc={item.desc}
             img={item.img}
+            cardQuantity={0}
           />
         ))
       ) : null}

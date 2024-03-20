@@ -15,7 +15,7 @@ const CatalogShop = () => {
         <h1>Error</h1>
       ) : isLoading ? (
         <h1>Loading...</h1>
-      ) : data ? (
+      ) : Array.isArray(data) ? (
         data.map((item) => (
           <CardItem
             key={item.id}
@@ -27,7 +27,9 @@ const CatalogShop = () => {
             cardQuantity={0}
           />
         ))
-      ) : null}
+      ) : (
+        <h1>No data available</h1>
+      )}
     </div>
   );
 };

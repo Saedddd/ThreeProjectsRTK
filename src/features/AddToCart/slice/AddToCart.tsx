@@ -2,6 +2,7 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 import ICart from "../types";
 import ICardItem from "@/entities/CardItem/types";
+import { toast } from "react-toastify";
 import { act } from "react-dom/test-utils";
 
 const initialState: ICart = {
@@ -18,8 +19,29 @@ const cartSlice = createSlice({
       );
       if (index >= 0) {
         state.card[index].cardQuantity = state.card[index].cardQuantity + 1;
+        toast.info(
+          `The number of ${action.payload.title} in the cart has increased`,
+          {
+            position: "bottom-left",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          }
+        );
       } else {
         const tempProduct = { ...action.payload, cardQuantity: 1 };
+        toast.success(`${action.payload.title} added to cart!`, {
+          position: "bottom-left",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
         state.card.push(tempProduct);
       }
     },

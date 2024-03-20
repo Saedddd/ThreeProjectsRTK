@@ -1,6 +1,7 @@
 import React from "react";
 
 import CatalogShop from "@/widgets/CatalogShop/ui/CatalogShop";
+import { ToastContainer } from "react-toastify";
 
 const Shopping = () => {
   return (
@@ -11,6 +12,7 @@ const Shopping = () => {
       <div className="">
         <CatalogShop />
       </div>
+      <ToastContainer />
     </main>
   );
 };

@@ -28,7 +28,7 @@ const CatalogShop = () => {
           />
         ))
       ) : (
-        <h1>No data available</h1>
+        <span>No data available</span>
       )}
     </div>
   );

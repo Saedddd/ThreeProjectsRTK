@@ -26,7 +26,7 @@ const AddTodoForm = () => {
   return (
     <form
       onSubmit={onSubmit}
-      className="form-inline mt-3 mb-3 flex gap-4 items-center"
+      className="form-inline mt-3 mb-4 flex gap-5 items-center"
     >
       <div className="">
         <label className="sr-only">Name</label>

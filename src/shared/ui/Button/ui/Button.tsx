@@ -5,7 +5,7 @@ import { IBtn } from '../types'
 const Button = ({className, onClick, type, children} : IBtn) => {
   return (
     <button className={className} onClick={onClick} type={type}>
-        {children}
+         {children}
     </button>
   )
 }

@@ -51,12 +51,12 @@ const Header = () => {
                     cardQuantity={item.cardQuantity}
                   />
                 ))}
-                <button
+                <Button
                   className="btn btn-primary"
                   onClick={() => dispatch(clearFromCart())}
                 >
                   Сlear
-                </button>
+                </Button>
               </div>
             </div>
           </div>

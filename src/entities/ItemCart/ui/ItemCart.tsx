@@ -11,7 +11,6 @@ const ItemCart = ({ img, title, id, desc, price, cardQuantity }: ICardItem) => {
   const handlerRemoveCard = () => {
     dispatch(removeFromCart(id));
   };
-
   return (
     <div className="card w-96 bg-base-100 shadow-xl image-full">
       <figure></figure>

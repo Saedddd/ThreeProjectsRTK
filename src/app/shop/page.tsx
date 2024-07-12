@@ -12,6 +12,7 @@ const Shopping = () => {
       <div className="">
         <CatalogShop />
       </div>
+      
       <ToastContainer />
     </main>
   );
